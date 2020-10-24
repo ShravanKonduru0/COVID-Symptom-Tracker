@@ -1,15 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button_third"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Results"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="476dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:text="Daily Symptoms"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:text="Click Add button to add more symptoms. Symptom options are, Fever, Cough, Shortness of breath, Fatigue, Muscle or body aches, Headache, Loss of taste or smell, Sore throat, Congestion, Nausea or vomitin, and Diarrhea. Click Results to get today's results." />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Symptom:" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Symptom Here" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Severity:" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/mild"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mild" />
+
+                <RadioButton
+                    android:id="@+id/moderate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Moderate" />
+
+                <RadioButton
+                    android:id="@+id/strong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Strong" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+ add symptom" />
+
+            <Button
+                android:id="@+id/button_third"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:insetLeft="155dp"
+                android:text="Results" />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
