@@ -41,6 +41,7 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Enter Symptom Here" />
@@ -53,8 +54,9 @@
                 android:text="Severity:" />
 
             <RadioGroup
+                android:id="@+id/RadioGroup"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <RadioButton
                     android:id="@+id/mild"
@@ -83,9 +85,10 @@
 
             <Button
                 android:id="@+id/button_third"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:insetLeft="155dp"
+                android:layout_width="307dp"
+                android:layout_height="145dp"
+                android:insetLeft="120dp"
+                android:insetTop="100dp"
                 android:text="Results" />
         </LinearLayout>
     </ScrollView>
